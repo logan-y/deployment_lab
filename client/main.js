@@ -11,7 +11,7 @@ sayHelloButton.addEventListener('mouseout', () => {
 })
 
 const sayHello = () => {
-    axios.get('http://localhost:3000/say-hello').then((res) => {
+    axios.get('http://localhost:4004/say-hello').then((res) => {
         let helloText = document.getElementById('hello-text');
         helloText.style.display = 'block';
         helloText.style.backgroundColor = 'green';
@@ -21,10 +21,8 @@ const sayHello = () => {
 
 sayHelloButton.addEventListener('click', sayHello);
 
-
-
 const ohMy = () => {
-    axios.get('http://localhost:3000/animals')
+    axios.get('http://localhost:4004/animals')
     .then(response => {
         for(let i = 0; i < response.data.length; i++){
             animal = document.createElement('p');
