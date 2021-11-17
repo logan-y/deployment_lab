@@ -9,6 +9,10 @@ app.get('/',function(req,res) {
 
 const port = process.env.PORT || 4004
 
+app.get('/animals', (req, res) => {
+    res.send(['Lions', 'Tigers', 'Bears'])
+})
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}`)
 })
